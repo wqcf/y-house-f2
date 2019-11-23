@@ -38,9 +38,95 @@ export class SfaddComponent implements OnInit {
     this.listOfData = [
       {
         id: "1",
-        name: `Edward King `,
-        age: '32',
-        address: `London, Park Lane no.`
+        name: "王安第",
+        yhzgx: '父子',
+        sex:'男',
+        cardId: "370826199910208888", 
+        birthday: "2019/12/12",
+        hyzk: "公告前离异",//婚姻状况（已婚/未婚/公告前离异/公告后离异）
+        hksfzc: "是",//户口是否在册（是/否
+        hkszd: "山东省济宁市微山县",//户口所在地（XX市XX
+        sjjzdz: "北京市朝阳区",//实际居住地址
+        hkqyqk: "从山东迁移到北京",//户口迁移情况（何时从何地迁入
+        sfybzxzf: "共有产权房",//是否有保障性住房（如：公租房/经适房/两限房/共有产权房等）
+        xgzdw: "城建院",//现工作单位及职务
+        lxdh: 1825462389,//联系电话
+        txdz: "北京市朝阳区潘家园模仿南里",//通讯地址
+        dbbm: "2342342",//电表编码
+        dh: 2,
+        kt: 2,
+        yxds: 1,
+        rsq: 1,
+        bz: '这是我测试用的'
+      },
+      {
+        id: "2",
+        name: "王安第",
+        yhzgx: '父子',
+        sex: '男',
+        cardId: "370826199910208888", 
+        birthday: "2019/12/12",
+        hyzk: "公告前离异",//婚姻状况（已婚/未婚/公告前离异/公告后离异）
+        hksfzc: "是",//户口是否在册（是/否
+        hkszd: "山东省济宁市微山县",//户口所在地（XX市XX
+        sjjzdz: "北京市朝阳区",//实际居住地址
+        hkqyqk: "从山东迁移到北京",//户口迁移情况（何时从何地迁入
+        sfybzxzf: "共有产权房",//是否有保障性住房（如：公租房/经适房/两限房/共有产权房等）
+        xgzdw: "城建院",//现工作单位及职务
+        lxdh: 1825462389,//联系电话
+        txdz: "北京市朝阳区潘家园模仿南里",//通讯地址
+        dbbm: "2342342",//电表编码
+        dh: 2,
+        kt: 2,
+        yxds: 1,
+        rsq: 1,
+        bz: '这是我测试用的'
+      },
+      {
+        id: "3",
+        name: "王安第",
+        yhzgx: '父子',
+        sex:'男',
+        cardId: "370826199910208888", 
+        birthday: "2019/12/12",
+        hyzk: "公告前离异",//婚姻状况（已婚/未婚/公告前离异/公告后离异）
+        hksfzc: "是",//户口是否在册（是/否
+        hkszd: "山东省济宁市微山县",//户口所在地（XX市XX
+        sjjzdz: "北京市朝阳区",//实际居住地址
+        hkqyqk: "从山东迁移到北京",//户口迁移情况（何时从何地迁入
+        sfybzxzf: "共有产权房",//是否有保障性住房（如：公租房/经适房/两限房/共有产权房等）
+        xgzdw: "城建院",//现工作单位及职务
+        lxdh: 1825462389,//联系电话
+        txdz: "北京市朝阳区潘家园模仿南里",//通讯地址
+        dbbm: "2342342",//电表编码
+        dh: 2,
+        kt: 2,
+        yxds: 1,
+        rsq: 1,
+        bz: '这是我测试用的'
+      },
+      {
+        id: "4",
+        name: "王安第",
+        yhzgx: '父子',
+        sex:'男',
+        cardId: "370826199910208888", 
+        birthday: "2019/12/12",
+        hyzk: "公告前离异",//婚姻状况（已婚/未婚/公告前离异/公告后离异）
+        hksfzc: "是",//户口是否在册（是/否
+        hkszd: "山东省济宁市微山县",//户口所在地（XX市XX
+        sjjzdz: "北京市朝阳区",//实际居住地址
+        hkqyqk: "从山东迁移到北京",//户口迁移情况（何时从何地迁入
+        sfybzxzf: "共有产权房",//是否有保障性住房（如：公租房/经适房/两限房/共有产权房等）
+        xgzdw: "城建院",//现工作单位及职务
+        lxdh: 1825462389,//联系电话
+        txdz: "北京市朝阳区潘家园模仿南里",//通讯地址
+        dbbm: "2342342",//电表编码
+        dh: 2,
+        kt: 2,
+        yxds: 1,
+        rsq: 1,
+        bz: '这是我测试用的'
       }
     ];
   }
@@ -53,6 +139,7 @@ export class SfaddComponent implements OnInit {
     event.preventDefault();
     event.stopPropagation();
     this.editId = id;
+    console.log(this.listOfData)
   }
 
   ngOnInit() {
@@ -68,8 +155,9 @@ export class SfaddComponent implements OnInit {
         reader.onload = function (e) {
           // 图片base64化
           var newUrl = this.result;
-          preview['style'].backgroundImage = 'url(' + newUrl + ')';
-          preview['style'].height = 900+'px';
+          preview.setAttribute('src', `${newUrl}`);
+          // preview['style'].backgroundImage = 'url(' + newUrl + ')';
+          // preview['style'].height = 900+'px';
         };
       }
     });
