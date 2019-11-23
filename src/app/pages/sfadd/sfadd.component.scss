@@ -1,0 +1,116 @@
+.add-container {
+  .title {
+    margin: 10px 0 30px 0;
+    text-align: center;
+    a {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: "幼圆";
+      color: #333333;
+      display: inline-block;
+      border-bottom: solid 3px #333;
+      padding: 0 0 1px 0;
+    }
+  }
+  section {
+    .title {
+      border-left: solid 6px #2a3d62;
+      border-bottom: solid 1px #2a3d62;
+      height: 30px;
+      padding: 0 0 0 6px;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: "幼圆";
+      color: #2a3d62;
+      width: 100%;
+      text-align: left;
+    }
+    .subtitle {
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "幼圆";
+      color: #2a3d62;
+      width: 100%;
+      text-align: left;
+      height: 50px;
+    }
+    .lbl {
+      font-size: 14px;
+      font-weight: bold;
+      font-family: "幼圆";
+      vertical-align: baseline;
+      line-height: 16px;
+      white-space: initial;
+      &.vm {
+        vertical-align: middle;
+      }
+      &.vt {
+        vertical-align: top;
+      }
+      &.large{
+        width: 230px;
+      }
+    }
+    .inp {
+      border: solid 1px #ccc;
+      height: 30px;
+      padding: 0 5px;
+      width: 100%;
+      vertical-align: middle;
+      border-radius: 0;
+      &.sml {
+        width: 70px;
+      }
+      &.normal {
+        width: 100px;
+      }
+    }
+    .textarea {
+      border: solid 1px #ccc;
+      height: 30px;
+      padding: 0 5px;
+      width: 500px;
+      vertical-align: middle;
+      border-radius: 0;
+    }
+    table {
+      table-layout: fixed;
+      width: 100%;
+      tr {
+        height: 50px;
+        td {
+          white-space: nowrap;
+          &:nth-child(odd) {
+            text-align: right;
+          }
+        }
+      }
+    }
+    //家庭成员情况
+    button {
+      margin-bottom: 16px;
+    }
+
+    .editable-cell {
+      position: relative;
+    }
+
+    .editable-cell-value-wrap {
+      padding: 5px 12px;
+      cursor: pointer;
+    }
+
+    .editable-row:hover .editable-cell-value-wrap {
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      padding: 4px 11px;
+    }
+  }
+  #preview{
+    width: 100%;
+    background-size: 100% 100%;
+  }
+  #file{
+    color: #fff;
+  }
+}
