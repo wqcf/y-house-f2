@@ -40,16 +40,16 @@ export class SfaddComponent implements OnInit {
         id: "1",
         name: "王安第",
         yhzgx: '父子',
-        sex:'男',
-        cardId: "370826199910208888", 
+        sex: "男",
+        cardId: "370826199910208888",
         birthday: "2019/12/12",
         hyzk: "公告前离异",//婚姻状况（已婚/未婚/公告前离异/公告后离异）
         hksfzc: "是",//户口是否在册（是/否
-        hkszd: "山东省济宁市微山县",//户口所在地（XX市XX
+        hkszd: "北京市朝阳区潘家园",//户口所在地（XX市XX
         sjjzdz: "北京市朝阳区",//实际居住地址
-        hkqyqk: "从山东迁移到北京",//户口迁移情况（何时从何地迁入
+        hkqyqk: "从大兴迁移到朝阳",//户口迁移情况（何时从何地迁入
         sfybzxzf: "共有产权房",//是否有保障性住房（如：公租房/经适房/两限房/共有产权房等）
-        xgzdw: "城建院",//现工作单位及职务
+        xgzdw: "中国铁路印刷厂",//现工作单位及职务
         lxdh: 1825462389,//联系电话
         txdz: "北京市朝阳区潘家园模仿南里",//通讯地址
         dbbm: "2342342",//电表编码
@@ -61,18 +61,18 @@ export class SfaddComponent implements OnInit {
       },
       {
         id: "2",
-        name: "王安第",
-        yhzgx: '父子',
-        sex: '男',
-        cardId: "370826199910208888", 
+        name: "王安文",
+        yhzgx: '母女',
+        sex: '女',
+        cardId: "370826199910208888",
         birthday: "2019/12/12",
         hyzk: "公告前离异",//婚姻状况（已婚/未婚/公告前离异/公告后离异）
         hksfzc: "是",//户口是否在册（是/否
-        hkszd: "山东省济宁市微山县",//户口所在地（XX市XX
+        hkszd: "北京市朝阳区潘家园",//户口所在地（XX市XX
         sjjzdz: "北京市朝阳区",//实际居住地址
-        hkqyqk: "从山东迁移到北京",//户口迁移情况（何时从何地迁入
+        hkqyqk: "从大兴迁移到朝阳",//户口迁移情况（何时从何地迁入
         sfybzxzf: "共有产权房",//是否有保障性住房（如：公租房/经适房/两限房/共有产权房等）
-        xgzdw: "城建院",//现工作单位及职务
+        xgzdw: "中国铁路印刷厂",//现工作单位及职务
         lxdh: 1825462389,//联系电话
         txdz: "北京市朝阳区潘家园模仿南里",//通讯地址
         dbbm: "2342342",//电表编码
@@ -82,52 +82,6 @@ export class SfaddComponent implements OnInit {
         rsq: 1,
         bz: '这是我测试用的'
       },
-      {
-        id: "3",
-        name: "王安第",
-        yhzgx: '父子',
-        sex:'男',
-        cardId: "370826199910208888", 
-        birthday: "2019/12/12",
-        hyzk: "公告前离异",//婚姻状况（已婚/未婚/公告前离异/公告后离异）
-        hksfzc: "是",//户口是否在册（是/否
-        hkszd: "山东省济宁市微山县",//户口所在地（XX市XX
-        sjjzdz: "北京市朝阳区",//实际居住地址
-        hkqyqk: "从山东迁移到北京",//户口迁移情况（何时从何地迁入
-        sfybzxzf: "共有产权房",//是否有保障性住房（如：公租房/经适房/两限房/共有产权房等）
-        xgzdw: "城建院",//现工作单位及职务
-        lxdh: 1825462389,//联系电话
-        txdz: "北京市朝阳区潘家园模仿南里",//通讯地址
-        dbbm: "2342342",//电表编码
-        dh: 2,
-        kt: 2,
-        yxds: 1,
-        rsq: 1,
-        bz: '这是我测试用的'
-      },
-      {
-        id: "4",
-        name: "王安第",
-        yhzgx: '父子',
-        sex:'男',
-        cardId: "370826199910208888", 
-        birthday: "2019/12/12",
-        hyzk: "公告前离异",//婚姻状况（已婚/未婚/公告前离异/公告后离异）
-        hksfzc: "是",//户口是否在册（是/否
-        hkszd: "山东省济宁市微山县",//户口所在地（XX市XX
-        sjjzdz: "北京市朝阳区",//实际居住地址
-        hkqyqk: "从山东迁移到北京",//户口迁移情况（何时从何地迁入
-        sfybzxzf: "共有产权房",//是否有保障性住房（如：公租房/经适房/两限房/共有产权房等）
-        xgzdw: "城建院",//现工作单位及职务
-        lxdh: 1825462389,//联系电话
-        txdz: "北京市朝阳区潘家园模仿南里",//通讯地址
-        dbbm: "2342342",//电表编码
-        dh: 2,
-        kt: 2,
-        yxds: 1,
-        rsq: 1,
-        bz: '这是我测试用的'
-      }
     ];
   }
 
@@ -142,24 +96,55 @@ export class SfaddComponent implements OnInit {
     console.log(this.listOfData)
   }
 
-  ngOnInit() {
-    this.addRow();
-    var preview = document.querySelector('#preview');
-    var eleFile = document.querySelector('#file');
-    eleFile.addEventListener('change', function () {
-      var file = this.files[0];
-      // 确认选择的文件是图片                
+  duibi;
+  fileChange(obj, ev) {
+    var file = ev.target['files'][0];
+    if (file) {
       if (file.type.indexOf("image") == 0) {
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function (e) {
           // 图片base64化
-          var newUrl = this.result;
-          preview.setAttribute('src', `${newUrl}`);
-          // preview['style'].backgroundImage = 'url(' + newUrl + ')';
-          // preview['style'].height = 900+'px';
+          var newUrl = e.target['result'];
+          document.querySelector(`#${obj.imageId}`).setAttribute('src', `${newUrl}`);
         };
       }
-    });
+    }
+    // 确认选择的文件是图片                
+
+  }
+  fileName = "点击或者拖拽图片到此处试试";
+  fujianUpdate(ev) {
+    var file = ev.target['files'][0];
+    if (file) {
+      this.fileName = file.name;
+      if (file.type.indexOf("image") == 0) {
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+          // 图片base64化
+          var newUrl = e.target['result'];
+        };
+      }
+    } else {
+      this.fileName = "点击或者拖拽图片到此处试试";
+
+    }
+    // 确认选择的文件是图片                
+
+  }
+
+  ngOnInit() {
+    this.addRow();
+    this.duibi = [{
+      imageId: "image1",
+      fileId: "file1",
+      title: 82,
+    },
+    {
+      imageId: "image2",
+      fileId: "file2",
+      title: 92,
+    }];
   }
 }

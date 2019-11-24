@@ -4,10 +4,11 @@ export class FWQK {
     public qlr = ""; // 权力人
     public qytdmj = ""; // 全员土地面积（平方米）
     public fwzl = "";//房屋坐落
-    public jfcd = null;//纠纷程度
+    public jfcd = "无";//纠纷程度
 }
 export class FWQL {
     public ghpj = "";//规划批件
+    public gzs = "";//规划批件
     public gdxpj = "";//公社、大队、小队批件
     public fypj = ""; // 法院判决
     public fdjc = ""; //法定继承

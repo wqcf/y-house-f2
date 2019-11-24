@@ -6,28 +6,27 @@
     <div class="title">房屋情况</div>
     <table>
       <tr>
-        <td><label class="lbl">房屋序号：</label></td>
+        <td>房屋序号：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwqk.xh" /></td>
-        <td><label class="lbl">标段：</label></td>
+        <td>标段：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwqk.bd" /></td>
-        <td><label class="lbl">权力人：</label></td>
+        <td>权力人：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwqk.qlr" /></td>
       </tr>
       <tr>
-        <td><label class="lbl">纠纷程度：</label></td>
+        <td>纠纷程度：</td>
         <td>
-          <nz-select [disabled]="isSeeFamily || isEditFamily" [(ngModel)]="fwqk.jfcd" class="inp" nzAllowClear
-            nzPlaceHolder="请选择">
+          <nz-select [disabled]="isSeeFamily || isEditFamily" [(ngModel)]="fwqk.jfcd" class="inp" nzPlaceHolder="请选择">
             <nz-option nzValue="无" nzLabel="无"></nz-option>
             <nz-option nzValue="一般" nzLabel="一般"></nz-option>
             <nz-option nzValue="较大" nzLabel="较大"></nz-option>
           </nz-select>
         </td>
-        <td><label class="lbl">全院土地面积 （平方米）：</label></td>
+        <td>全院土地面积 （平方米）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwqk.qytdmj" /></td>
       </tr>
       <tr>
-        <td><label class="lbl">房屋坐落：</label></td>
+        <td>房屋坐落：</td>
         <td colspan="5">
           <textarea rows="4" nz-input [(ngModel)]="fwqk.fwzl"></textarea>
         </td>
@@ -41,29 +40,39 @@
         <th colspan="6" class="subtitle">房屋权属来源</th>
       </tr>
       <tr>
-        <td><label class="lbl">规划批件：</label></td>
+        <td>所有权证：</td>
         <td>
-          <input class="inp normal" nz-input type="text" [(ngModel)]="fwql.ghpj" />
+          <input class="inp" nz-input type="text" [(ngModel)]="fwql.syqz" />
         </td>
-        <td><label class="lbl large">公社、大队、小队批件：</label></td>
+        <td>规划批件：</td>
         <td>
-          <input class="inp normal" nz-input type="text" [(ngModel)]="fwql.gdxpj" />
+          <input class="inp" nz-input type="text" [(ngModel)]="fwql.ghpj" />
         </td>
-        <td><label class="lbl">法院判决：</label></td>
+        <td>公社、大队、小队批件：</td>
         <td>
-          <input class="inp normal" nz-input type="text" [(ngModel)]="fwql.fypj" />
+          <input class="inp" nz-input type="text" [(ngModel)]="fwql.gdxpj" />
         </td>
       </tr>
       <tr>
-        <td><label class="lbl">法定继承：</label></td>
-        <td><input class="inp normal" nz-input type="text" [(ngModel)]="fwql.fdjc" /></td>
-        <td><label class="lbl">自行析产：</label></td>
-        <td><input class="inp normal" nz-input type="text" [(ngModel)]="fwql.zxxc" /></td>
-        <td><label class="lbl">离异分割：</label></td>
-        <td><input class="inp normal" nz-input type="text" [(ngModel)]="fwql.lyfg" /></td>
+        <td>法院判决：</td>
+        <td>
+          <input class="inp" nz-input type="text" [(ngModel)]="fwql.fypj" />
+        </td>
+        <td>公证书：</td>
+        <td>
+          <input class="inp" nz-input type="text" [(ngModel)]="fwql.gzs" />
+        </td>
+        <td>法定继承：</td>
+        <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.fdjc" /></td>
       </tr>
       <tr>
-        <td><label class="lbl">其&nbsp;&nbsp;&nbsp;&nbsp;他：</label></td>
+        <td>自行析产：</td>
+        <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.zxxc" /></td>
+        <td>离异分割：</td>
+        <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.lyfg" /></td>
+      </tr>
+      <tr>
+        <td>其&nbsp;&nbsp;&nbsp;&nbsp;他：</td>
         <td colspan="5">
           <textarea rows="4" nz-input [(ngModel)]="fwqk.qt"></textarea>
         </td>
@@ -72,9 +81,9 @@
         <th colspan="6" class="subtitle">现状首层建筑情况</th>
       </tr>
       <tr>
-        <td><label class="lbl">实际间数（间）：</label></td>
+        <td>实际间数（间）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.sjjs" /></td>
-        <td><label class="lbl">首层建面（平方米）：</label></td>
+        <td>首层建面（平方米）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.scjm" /></td>
         <td></td>
         <td></td>
@@ -83,17 +92,17 @@
         <th colspan="6" class="subtitle">未经批准建筑情况</th>
       </tr>
       <tr>
-        <td><label class="lbl">地下室（平方米）：</label></td>
+        <td>地下室（平方米）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.dxs" /></td>
-        <td><label class="lbl">二层及以上（平方米）：</label></td>
+        <td>二层及以上（平方米）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.ecjyx" /></td>
-        <td><label class="lbl">院内棚房（平方米）：</label></td>
+        <td>院内棚房（平方米）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.ynpf" /></td>
       </tr>
       <tr>
-        <td><label class="lbl">院外房（平方米）：</label></td>
+        <td>院外房（平方米）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.ywf" /></td>
-        <td colspan="2"><label class="lbl">未经批准建筑面积小计（平方米）：</label></td>
+        <td colspan="2">未经批准建筑面积小计（平方米）：</td>
         <td colspan="2"><input class="inp" nz-input type="text" [(ngModel)]="fwql.wjpz" /></td>
       </tr>
       <tr>
@@ -106,30 +115,30 @@
         <th colspan="6" class="subtitle">其中：经营房屋情况</th>
       </tr>
       <tr>
-        <td><label class="lbl">营业执照：</label></td>
+        <td>营业执照：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.yyzz" /></td>
-        <td><label class="lbl">纳税证明：</label></td>
+        <td>纳税证明：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.nszm" /></td>
-        <td><label class="lbl">实际间数（间）：</label></td>
+        <td>实际间数（间）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.sjjs2" /></td>
       </tr>
       <tr>
-        <td><label class="lbl">营业面积（平方米）：</label></td>
+        <td>营业面积（平方米）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.yymj" /></td>
       </tr>
       <tr>
         <th colspan="6" class="subtitle">其中：信鸽</th>
       </tr>
       <tr>
-        <td><label class="lbl">鸽棚面积（平方米）：</label></td>
+        <td>鸽棚面积（平方米）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.gpmj" /></td>
-        <td><label class="lbl">信鸽足环证数（个）：</label></td>
+        <td>信鸽足环证数（个）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwql.xgzh" /></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <td><label class="subtitle">权属文件来源简述：</label></td>
+        <td class="subtitle">权属文件来源简述：</td>
         <td colspan="5">
           <textarea rows="4" nz-input [(ngModel)]="fwqk.qswj"></textarea>
         </td>
@@ -140,13 +149,13 @@
     <div class="title">房屋使用情况</div>
     <table>
       <tr>
-        <td><label class="lbl">自住（间）：</label></td>
+        <td>自住（间）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwsyqk.zz" /></td>
-        <td><label class="lbl">出租（间）：</label></td>
+        <td>出租（间）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwsyqk.cz" /></td>
-        <td><label class="lbl">空置（间）：</label></td>
+        <td>空置（间）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwsyqk.kz" /></td>
-        <td><label class="lbl">合计（间）：</label></td>
+        <td>合计（间）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="fwsyqk.hj" /></td>
       </tr>
     </table>
@@ -155,16 +164,15 @@
     <div class="title">人口情况</div>
     <table>
       <tr>
-        <td><label class="lbl">户口本数（个）：</label></td>
+        <td>户口本数（个）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="rkqk.hkbs" /></td>
-        <td><label class="lbl">户籍人数（人）：</label></td>
+        <td>户籍人数（人）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="rkqk.hjrs" /></td>
-        <td><label class="lbl">非在册人数（人）：</label></td>
+        <td>非在册人数（人）：</td>
         <td><input class="inp" nz-input type="text" [(ngModel)]="rkqk.fzcrs" /></td>
-        <td><label class="lbl">代际关系数：</label></td>
+        <td>代际关系数：</td>
         <td>
-          <nz-select [disabled]="isSeeFamily || isEditFamily" [(ngModel)]="fwqk.djgxs" class="inp" nzAllowClear
-            nzPlaceHolder="请选择">
+          <nz-select [disabled]="isSeeFamily || isEditFamily" [(ngModel)]="fwqk.djgxs" class="inp" nzPlaceHolder="请选择">
             <nz-option nzValue="1代" nzLabel="1代"></nz-option>
             <nz-option nzValue="2代" nzLabel="2代"></nz-option>
             <nz-option nzValue="3代" nzLabel="3代"></nz-option>
@@ -177,10 +185,10 @@
   </section>
   <section>
     <div class="title">家庭成员情况</div>
-    <nz-table #editRowTable nzBordered [nzPageSize]="8" [nzScroll]="{ x: '4000px' }" [nzData]=" listOfData">
+    <nz-table *ngIf="this.listOfData.length > 0" #editRowTable nzBordered [nzPageSize]="8" [nzScroll]="{ x: '4000px' }" [nzData]="listOfData">
       <thead>
         <tr>
-          <th nzAlign="center" nzWidth="350px">ID号 <br/> （院落-标段-组-序号-户口-编号） </th>
+          <th nzAlign="center" nzWidth="350px">ID号 <br /> （院落-标段-组-序号-户口-编号） </th>
           <th nzAlign="center" nzWidth="200px">姓名</th>
           <th nzAlign="center" nzWidth="200px">与户主的关系</th>
           <th nzAlign="center" nzWidth="200px">性别</th>
@@ -223,7 +231,16 @@
               </div>
             </div>
             <ng-template #edit_yhzgx>
-              <input type="text" class="content_input" nz-input [(ngModel)]="data.yhzgx" />
+              <nz-select [disabled]="isSeeFamily || isEditFamily" [(ngModel)]="data.yhzgx" class="content_input"
+                nzPlaceHolder="请选择">
+                <nz-option nzValue="本人" nzLabel="本人"></nz-option>
+                <nz-option nzValue="配偶" nzLabel="配偶"></nz-option>
+                <nz-option nzValue="父子" nzLabel="父子"></nz-option>
+                <nz-option nzValue="母子" nzLabel="母子"></nz-option>
+                <nz-option nzValue="孙子" nzLabel="孙子"></nz-option>
+                <nz-option nzValue="孙女" nzLabel="孙女"></nz-option>
+              </nz-select>
+              <!-- <input type="text" class="content_input" nz-input [(ngModel)]="data.yhzgx" /> -->
             </ng-template>
           </td>
           <td>
@@ -233,12 +250,12 @@
               </div>
             </div>
             <ng-template #edit_sex>
-              <!-- <nz-select class="content_input" [disabled]="isSeeFamily || isEditFamily" [(ngModel)]="data.sex"
-                class="inp" nzPlaceHolder="请选择">
+              <nz-select class="content_input" [disabled]="isSeeFamily || isEditFamily" [(ngModel)]="data.sex"
+                nzPlaceHolder="请选择">
                 <nz-option nzValue="男" nzLabel="男"></nz-option>
                 <nz-option nzValue="女" nzLabel="女"></nz-option>sex
-              </nz-select> -->
-              <input type="text" class="content_input" nz-input [(ngModel)]="data.sex" />
+              </nz-select>
+              <!-- <input type="text" class="content_input" nz-input [(ngModel)]="data.sex" /> -->
 
             </ng-template>
           </td>
@@ -269,7 +286,14 @@
               </div>
             </div>
             <ng-template #edit_hyzk>
-              <input type="text" class="content_input" nz-input [(ngModel)]="data.hyzk" />
+              <nz-select [disabled]="isSeeFamily || isEditFamily" [(ngModel)]="data.hyzk" class="content_input"
+                nzPlaceHolder="请选择">
+                <nz-option nzValue="已婚" nzLabel="已婚"></nz-option>
+                <nz-option nzValue="未婚" nzLabel="未婚"></nz-option>
+                <nz-option nzValue="公告前离异" nzLabel="公告前离异"></nz-option>
+                <nz-option nzValue="公告后离异" nzLabel="公告后离异"></nz-option>
+              </nz-select>
+              <!-- <input type="text" class="content_input" nz-input [(ngModel)]="data.hyzk" /> -->
             </ng-template>
           </td>
           <td>
@@ -279,7 +303,12 @@
               </div>
             </div>
             <ng-template #edit_hksfzc>
-              <input type="text" class="content_input" nz-input [(ngModel)]="data.hksfzc" />
+              <nz-select [disabled]="isSeeFamily || isEditFamily" [(ngModel)]="data.hksfzc" class="content_input"
+                nzPlaceHolder="请选择">
+                <nz-option nzValue="是" nzLabel="是"></nz-option>
+                <nz-option nzValue="否" nzLabel="否"></nz-option>
+              </nz-select>
+              <!-- <input type="text" class="content_input" nz-input [(ngModel)]="data.hksfzc" /> -->
             </ng-template>
           </td>
           <td>
@@ -420,31 +449,31 @@
     <div class="title">关注事项</div>
     <table>
       <tr>
-        <td><label class="lbl">家庭成员中代际关系、有无纠纷及程度、思想动态：</label></td>
+        <td>家庭成员中代际关系、有无纠纷及程度、思想动态：</td>
         <td colspan="5">
           <textarea rows="1" nz-input [(ngModel)]="gzsx.jtcy"></textarea>
         </td>
       </tr>
       <tr>
-        <td><label class="lbl">关联院落及关联面积（直系亲属院落及继承面积）：</label></td>
+        <td>关联院落及关联面积（直系亲属院落及继承面积）：</td>
         <td colspan="5">
           <textarea rows="1" nz-input [(ngModel)]="gzsx.glyl"></textarea>
         </td>
       </tr>
       <tr>
-        <td><label class="lbl">市、区重点上访人：</label></td>
+        <td>市、区重点上访人：</td>
         <td colspan="5">
           <textarea rows="1" nz-input [(ngModel)]="gzsx.siqu"></textarea>
         </td>
       </tr>
       <tr>
-        <td><label class="lbl">是否党员和公职人员：</label></td>
+        <td>是否党员和公职人员：</td>
         <td colspan="5">
           <textarea rows="1" nz-input [(ngModel)]="gzsx.sfdy"></textarea>
         </td>
       </tr>
       <tr>
-        <td><label class="lbl">其他：</label></td>
+        <td>其他：</td>
         <td colspan="5">
           <textarea rows="1" nz-input [(ngModel)]="gzsx.qt"></textarea>
         </td>
@@ -453,20 +482,22 @@
   </section>
   <section>
     <div class="title">附：家庭结构图</div>
-    <input type="file" accept="image/*" id="file" value="" />
-    <img src="" id="preview" alt="">
+    <div class="file-style" style="position: relative;">
+      <div class="file_button2">{{fileName}}</div>
+      <input type="file" accept="image/*" class="file" id="file" value="" (change)="fujianUpdate($event)"/>
+    </div>
   </section>
   <section>
     <div class="title">历年对比图</div>
-    <table class="comparison">
-      <tr>
-        <td>82</td>
-        <td>02</td>
-      </tr>
-      <tr>
-        <td><img src="./assets/images/login-bg.jpg" width="100%" alt=""></td>
-        <td><img src="./assets/images/login-bg.jpg" width="100%" alt=""></td>
-      </tr>
-    </table>
+    <div class="duibi-container">
+      <div class="duibi-box" *ngFor="let data of duibi;">
+        <div class="duibi_title">{{ data.title }}</div>
+        <div class="duibi_content file-style">
+          <div class="file_button2">点击或者拖拽图片到此处试试</div>
+          <input type="file" accept="image/*" class="file" [id]="data.fileId" value="" (change)="fileChange(data,$event)"/>
+          <img src="" class="preview" [id]="data.imageId" alt="">
+        </div>
+      </div>
+    </div>
   </section>
 </div>
